@@ -1,6 +1,16 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  transition: all 2s;
+  font-family: "QuickSand", Arial, sans-serif;
+}
+h1,
+h2,
+h4 {
+  font-family: "QuickSand", Arial, sans-serif;
+}
 .wrapper {
   width: 100%;
   display: flex;
@@ -14,6 +24,27 @@
   position: absolute;
   left: 0;
   top: 0;
+}
+.active {
+  font-weight: bold;
+}
+
+.nav-link {
+  text-decoration: none;
+  position: relative;
+}
+.nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid rgba(0, 0, 0);
+  transition: 0.4s;
+}
+
+.nav-link:hover:after {
+  width: 100%;
 }
 .sidebar {
   min-width: 250px;
@@ -36,12 +67,17 @@ Nav {
 
 .content {
   position: fixed;
+  overflow: scroll;
+  overflow-x: hidden;
   left: 250px;
   padding: 10px;
   width: 80%;
+  height: 100%;
   background-color: cadetblue;
 }
-.home {
+/* -------------------------------------------Home ---------------------------------------------------- */
+.home,
+.about {
   width: 100%;
   min-height: 500px;
 }
@@ -76,7 +112,52 @@ Nav {
   min-height: 500px;
   padding: 2.5em;
 }
+/* ---------------------------------------------About------------------------------------------ */
 
+.about {
+  padding: 20px;
+}
+
+.about h2 {
+  margin-bottom: 1.5em;
+}
+
+.about p {
+  padding: 10px;
+  text-align: justify;
+}
+
+.about h6 {
+  margin-top: 1.2em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* ----------------------------Skills-------------------------------- */
+
+.skills {
+  min-height: 400px;
+  padding: 20px;
+  background-color: cornsilk;
+}
+
+.progress {
+  margin-bottom: 1.2em;
+}
+.color-1 {
+  background-color: rgb(196, 75, 75) !important;
+}
+
+.color-2 {
+  background-color: rgb(248, 127, 82) !important;
+}
+
+.color-3 {
+  background-color: rgb(216, 200, 53) !important;
+}
+
+.color-4 {
+  background-color: rgb(134, 9, 113) !important;
+}
 @media (max-width: 768px) {
   .transformBtn {
     top: 0;
