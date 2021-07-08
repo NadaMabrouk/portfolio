@@ -1,10 +1,19 @@
+* {
+  box-sizing: border-box;
+}
 .wrapper {
+  width: 100%;
   display: flex;
   align-items: stretch;
 }
-
+.container-fluid {
+  padding-left: 0 !important;
+}
 .navbar {
   padding: 0 !important;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .sidebar {
   min-width: 250px;
@@ -24,8 +33,107 @@ Nav {
 .sidebar img {
   border-radius: 50%;
 }
-/* @media (max-width: 768px) {
-  .sidebar {
-    margin-left: -250px;
+
+.content {
+  position: fixed;
+  left: 250px;
+  padding: 10px;
+  width: 80%;
+  background-color: cadetblue;
+}
+.home {
+  width: 100%;
+  min-height: 500px;
+}
+.bg {
+  background-color: red;
+  background-image: url(https://i.postimg.cc/prQvZxNp/profile-photo-2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: bg_animation 1.5s;
+}
+.row {
+  margin: 0 !important;
+}
+
+.animated {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  padding: 2.5em;
+}
+
+@media (max-width: 768px) {
+  .transformBtn {
+    top: 0;
+    transform: translateX(190px);
+    transition: 0.5s ease-in-out;
+    z-index: 999;
   }
-} */
+  .navbar-collapse {
+    position: absolute;
+    top: 0;
+    left: -250px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    z-index: 1;
+  }
+  .navbar-collapse.collapsing {
+    height: auto;
+    -webkit-transition: left 0.3s ease;
+    -o-transition: left 0.3s ease;
+    -moz-transition: left 0.3s ease;
+    transition: left 0.3s ease;
+    /* left: -100%; */
+  }
+  .navbar-collapse.show {
+    left: 0;
+    -webkit-transition: left 0.3s ease-in-out;
+    -o-transition: left 0.3s ease-in;
+    -moz-transition: left 0.3s ease-in;
+    transition: left 0.3s ease-in-out;
+  }
+  .content {
+    width: 100%;
+    left: 0px;
+    z-index: -1;
+    padding: 20px;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes bg_animation {
+  0% {
+    background-position: -100px 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

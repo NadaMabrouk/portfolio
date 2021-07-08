@@ -15,11 +15,10 @@ class Sidebar extends Component{
             collapse: false
         })
     }
-    render(){
-       
+    render(){  
         return(
-               <Navbar className="navbar" defaultactivekey="/home" expand="lg" onToggle={this.toggle} expanded={this.state.collapse} >
-                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
+               <Navbar className="navbar" defaultactivekey="/home" expand="md" onToggle={this.toggle} expanded={this.state.collapse} >
+                 <Navbar.Toggle aria-controls="basic-navbar-nav" className={this.state.collapse?"transformBtn":""}/>
                  <Navbar.Collapse  id="basic-navbar-nav" >
                     <Nav className="mr-auto flex-column sidebar" onClick={this.closeNav}>
                         <Navbar.Brand href="#home">
