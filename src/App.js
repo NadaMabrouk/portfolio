@@ -1,30 +1,31 @@
 import './App.css';
-import { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
+import React, { Component } from 'react';
 import Sidebar from './components/Sidebar'
 import Home from './components/Home'
 import About from './components/About'
 import Skills from './components/Skills'
+import Projects from './components/Projects'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component{
+  
   render(){
     return (
       <div className="wrapper">
-        
         <Sidebar />
-          
           <div className="content">
-            <div id="home" >
+            <section id="home">
               <Home /> 
-            </div>
-            <div id="about" >
+            </section>
+            <section id="about">
               <About /> 
-            </div>
-            <div id="skills">
+            </section>
+            <section id="skills">
               <Skills />
-            </div>
+            </section>
+            <section id="projects">
+              <Projects />
+            </section>
           </div>
             
         </div>

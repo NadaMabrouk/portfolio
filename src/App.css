@@ -69,6 +69,7 @@ Nav {
   position: fixed;
   overflow: scroll;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   left: 250px;
   padding: 10px;
   width: 80%;

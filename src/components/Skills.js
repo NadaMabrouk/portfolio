@@ -7,9 +7,7 @@ class Skills extends Component{
     componentDidMount(){
         const observer = new IntersectionObserver(entries => {
             // Loop over the entries
-            console.log(entries)
             entries.forEach(entry => {
-                console.log(entry)
               // If the element is visible
               if (entry.isIntersecting) {
                 // Add the animation class

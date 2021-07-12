@@ -5,7 +5,7 @@ class ProgressBar extends Component{
         return (
             <div>
                 <h6>{this.props.title}</h6>
-                <div class="progress">
+                <div className="progress">
                     <div className={[ "progress-bar" ,this.props.bgcolor].join(" ")}
                          role="progressbar" 
                          aria-valuenow={this.props.width} 
