@@ -55,7 +55,7 @@ h4 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: aqua;
+  background-color: rgba(216, 213, 213, 0.7);
 }
 Nav {
   align-self: center;
@@ -74,7 +74,6 @@ Nav {
   padding: 10px;
   width: 80%;
   height: 100%;
-  background-color: cadetblue;
 }
 /* -------------------------------------------Home ---------------------------------------------------- */
 .home,
@@ -83,7 +82,6 @@ Nav {
   min-height: 500px;
 }
 .bg {
-  background-color: red;
   background-image: url(https://i.postimg.cc/prQvZxNp/profile-photo-2.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -138,7 +136,6 @@ Nav {
 .skills {
   min-height: 400px;
   padding: 20px;
-  background-color: cornsilk;
 }
 
 .progress {
@@ -158,6 +155,18 @@ Nav {
 
 .color-4 {
   background-color: rgb(134, 9, 113) !important;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-indicators li {
+  border-bottom: 10px solid rgba(190, 187, 187, 0.7) !important;
 }
 @media (max-width: 768px) {
   .transformBtn {

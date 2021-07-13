@@ -32,7 +32,7 @@ export const CarouselData = [
     },
     {
         src:project4,
-        link:'https://nadamabrouk.github.io/Would-you-rather-game/login',
+        link:'https://nadamabrouk.github.io/Would-you-rather-game/',
         title: 'Would you rather game',
         key: 'slide5'
     }

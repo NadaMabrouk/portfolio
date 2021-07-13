@@ -35,7 +35,8 @@ const styles = {
     },
     carousel: {
         height:'100%',
-        width:'100%'
+        width:'100%',
+        background:'red'
     }
 }
 export default Projects
