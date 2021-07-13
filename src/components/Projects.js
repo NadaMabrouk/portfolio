@@ -32,6 +32,7 @@ const styles = {
     projects: {
     height: '400px',
     width: '100%',
+    padding: '10px'
     },
     carousel: {
         height:'100%',

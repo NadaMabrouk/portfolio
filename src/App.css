@@ -81,8 +81,12 @@ Nav {
   width: 100%;
   min-height: 500px;
 }
+.home,
+.skills {
+  background-color: rgb(243, 242, 241);
+}
 .bg {
-  background-image: url(https://i.postimg.cc/prQvZxNp/profile-photo-2.png);
+  background-image: url("C:/portfolio/src/imgs/bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   animation: bg_animation 1.5s;
@@ -111,6 +115,20 @@ Nav {
   min-height: 500px;
   padding: 2.5em;
 }
+
+.btn {
+  color: #000 !important;
+  border: 1px solid #000 !important;
+  background: transparent !important;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  color: #000;
+  border: 1px solid #000;
+}
+
 /* ---------------------------------------------About------------------------------------------ */
 
 .about {
@@ -166,9 +184,18 @@ Nav {
 }
 
 .carousel-indicators li {
+  border-radius: 0% !important;
+  width: 1.625rem !important;
   border-bottom: 10px solid rgba(190, 187, 187, 0.7) !important;
+  color: rgba(238, 232, 232, 0.7);
 }
 @media (max-width: 768px) {
+  .bg {
+    background-image: url("C:/portfolio/src/imgs/bg-smallsc.png");
+  }
+  .desc {
+    align-items: flex-start;
+  }
   .transformBtn {
     top: 0;
     transform: translateX(190px);
