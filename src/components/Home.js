@@ -13,6 +13,7 @@ function Home () {
                             className="btn"
                             href="https://www.dropbox.com/s/tj3k0jxlew0idte/Nada%20Mabrouk%20-%202021.pdf?dl=0#"
                             target="_blank"
+                            rel="noreferrer"
                         >
                             Show Resume
                             <MDBIcon

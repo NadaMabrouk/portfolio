@@ -5,6 +5,8 @@ import Home from './components/Home'
 import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
+import ContactUs from './components/ContactUs'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component{
@@ -26,8 +28,10 @@ class App extends Component{
             <section id="projects">
               <Projects />
             </section>
+            <section id="contact">
+              <ContactUs />
+            </section>
           </div>
-            
         </div>
    
     )

@@ -183,12 +183,90 @@ Nav {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
+.carouselLink {
+  color: #000;
+  font-size: 18px;
+}
 .carousel-indicators li {
   border-radius: 0% !important;
   width: 1.625rem !important;
   border-bottom: 10px solid rgba(190, 187, 187, 0.7) !important;
   color: rgba(238, 232, 232, 0.7);
 }
+
+/* -----------------------------------Contact Us--------------------------------- */
+.contact {
+  min-height: 200px;
+  background-color: rgb(230, 233, 232);
+  width: 100%;
+  padding: 20px;
+}
+.info {
+  margin-left: 1.5em;
+}
+/* .contactInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} */
+
+.contactInfo > ul {
+  list-style: none;
+  margin: 2% auto;
+  width: 250px;
+}
+
+.contactInfo > ul > li {
+  display: inline;
+  margin: 1%;
+}
+
+.contactInfo > ul > li > a {
+  text-decoration: none;
+}
+
+.circle {
+  padding: 10px;
+  width: 40px;
+  background-color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+.facebook {
+  color: #3b5897;
+  border-color: #3b5897;
+}
+.facebook:hover {
+  background-color: #3b5897;
+}
+
+.linkedin {
+  color: #0e78aa;
+  border-color: #0e78aa;
+}
+
+.linkedin:hover {
+  background-color: #0e78aa;
+}
+
+.github {
+  color: #333;
+  border-color: #333;
+}
+
+.github:hover {
+  background-color: #333;
+}
+
+.facebook:hover,
+.linkedin:hover,
+.github:hover {
+  color: #ffffff;
+}
+
 @media (max-width: 768px) {
   .bg {
     background-image: url("C:/portfolio/src/imgs/bg-smallsc.png");

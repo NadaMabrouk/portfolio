@@ -17,7 +17,7 @@ class Projects extends Component {
                                     alt="First slide"
                                 />
                                 <Carousel.Caption>
-                                    <a href={entry.link} target="_blank"  rel="noreferrer">{entry.title}</a>
+                                    <a className="carouselLink" href={entry.link} target="_blank"  rel="noreferrer">{entry.title}</a>
                                 </Carousel.Caption>
                             </CarouselItem>
                         )
@@ -30,14 +30,12 @@ class Projects extends Component {
 }
 const styles = {
     projects: {
-    height: '400px',
     width: '100%',
     padding: '10px'
     },
     carousel: {
         height:'100%',
         width:'100%',
-        background:'red'
     }
 }
 export default Projects
