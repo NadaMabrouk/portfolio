@@ -1,26 +1,29 @@
-
-import React, { Component } from 'react'
+import React, { Component, useEffect } from 'react'
 import ProgressBar from './ProgressBar'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
-
-class Skills extends Component{
-    componentDidMount(){
-        const observer = new IntersectionObserver(entries => {
-            // Loop over the entries
-            entries.forEach(entry => {
-              // If the element is visible
-              if (entry.isIntersecting) {
-                // Add the animation class
-                entry.target.classList.add('animated');
-                entry.target.classList.add('fadeInUp');
-              }
-            });
-          });
+export default function Skills (){
+    // componentDidMount(){
+    //     const observer = new IntersectionObserver(entries => {
+    //         // Loop over the entries
+    //         entries.forEach(entry => {
+    //           // If the element is visible
+    //           if (entry.isIntersecting) {
+    //             // Add the animation class
+    //             entry.target.classList.add('animated');
+    //             entry.target.classList.add('fadeInUp');
+    //           }
+    //         });
+    //       });
           
-          var allElements = document.querySelectorAll('.skills .progress')
-          allElements.forEach(elem => observer.observe(elem))
-    }
-    render(){
+    //       var allElements = document.querySelectorAll('.skills .progress')
+    //       allElements.forEach(elem => observer.observe(elem))
+    // }
+    // render(){
+    useEffect(() => {
+        AOS.init({ duration:500 });
+    },[])
     return (
             <div className="skills">
                 <div className="row">
@@ -31,7 +34,7 @@ class Skills extends Component{
                     </p>
                     </div>
                 </div>
-                <div className="row">
+                <div data-aos="fade-in" className="row">
                     <div className=" col-md-5 col-lg-5">
                         <ProgressBar title="HTML5" bgcolor="color-1" width="90%"/>
                         <ProgressBar title="CSS" bgcolor="color-2" width="85%"/>
@@ -47,7 +50,7 @@ class Skills extends Component{
                 </div>
             </div>
     )
-}
+// }
 }
 
-export default Skills;
+// export default Skills;
