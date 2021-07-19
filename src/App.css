@@ -1,7 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   transition: all 2s;
   font-family: "QuickSand", Arial, sans-serif;
@@ -19,60 +21,12 @@ h4 {
 .container-fluid {
   padding-left: 0 !important;
 }
-.navbar {
-  padding: 0 !important;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.active {
-  font-weight: bold;
-}
-
-.nav-link {
-  text-decoration: none;
-  position: relative;
-}
-.nav-link:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  border-bottom: 2px solid rgba(0, 0, 0);
-  transition: 0.4s;
-}
-
-.nav-link:hover:after {
-  width: 100%;
-}
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 20%;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: rgba(216, 213, 213, 0.7);
-}
-Nav {
-  align-self: center;
-}
-
-.sidebar img {
-  border-radius: 50%;
-}
-
 .content {
   margin-left: 20%;
-  overflow: scroll;
-  scroll-behavior: smooth;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+
 /* -------------------------------------------Home ---------------------------------------------------- */
 .home,
 .about {
@@ -82,49 +36,6 @@ Nav {
 .home,
 .skills {
   background-color: rgb(243, 242, 241);
-}
-.bg {
-  background-image: url("C:/portfolio/src/imgs/bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  animation: bg_animation 1.5s;
-}
-.row {
-  margin: 0 !important;
-}
-
-.animated {
-  animation-duration: 1.5s;
-  animation-fill-mode: both;
-}
-
-.fadeInUp {
-  animation-name: fadeInUp;
-}
-
-.fadeInRight {
-  animation-name: fadeInRight;
-}
-.desc {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 500px;
-  padding: 2.5em;
-}
-
-.btn {
-  color: #000 !important;
-  border: 1px solid #000 !important;
-  background: transparent !important;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.btn:hover {
-  color: #000;
-  border: 1px solid #000;
 }
 
 /* ---------------------------------------------About------------------------------------------ */
@@ -173,6 +84,8 @@ Nav {
   background-color: rgb(134, 9, 113) !important;
 }
 
+/* --------------------------------Projects ------------------------- */
+
 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
 }
@@ -192,79 +105,7 @@ Nav {
   color: rgba(238, 232, 232, 0.7);
 }
 
-/* -----------------------------------Contact Us--------------------------------- */
-.contact {
-  min-height: 200px;
-  background-color: rgb(230, 233, 232);
-  width: 100%;
-  padding: 20px;
-}
-.info {
-  margin-left: 1.5em;
-}
-/* .contactInfo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-} */
-
-.contactInfo > ul {
-  list-style: none;
-  margin: 2% auto;
-  width: 250px;
-}
-
-.contactInfo > ul > li {
-  display: inline;
-  margin: 1%;
-}
-
-.contactInfo > ul > li > a {
-  text-decoration: none;
-}
-
-.circle {
-  padding: 10px;
-  width: 40px;
-  background-color: #ffffff;
-  font-size: 20px;
-  text-align: center;
-  border-radius: 20px;
-  border: 1px solid;
-}
-
-.facebook {
-  color: #3b5897;
-  border-color: #3b5897;
-}
-.facebook:hover {
-  background-color: #3b5897;
-}
-
-.linkedin {
-  color: #0e78aa;
-  border-color: #0e78aa;
-}
-
-.linkedin:hover {
-  background-color: #0e78aa;
-}
-
-.github {
-  color: #333;
-  border-color: #333;
-}
-
-.github:hover {
-  background-color: #333;
-}
-
-.facebook:hover,
-.linkedin:hover,
-.github:hover {
-  color: #ffffff;
-}
-
+/* ---------------------------Responsive queries */
 @media (max-width: 768px) {
   .bg {
     background-image: url("C:/portfolio/src/imgs/bg-smallsc.png");
@@ -272,62 +113,43 @@ Nav {
   .desc {
     align-items: flex-start;
   }
+  .sidebar {
+    width: 180px;
+    background-color: rgba(216, 213, 213);
+  }
   .transformBtn {
     top: 0;
-    transform: translateX(190px);
+    transform: translateX(135px);
     transition: 0.5s ease-in-out;
     z-index: 999;
   }
-  .navbar-collapse {
-    position: absolute;
-    top: 0;
-    left: -250px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    width: 100%;
-    z-index: 1;
+  .navbar-toggler {
+    position: fixed;
+    top: 0 !important;
   }
   .navbar-collapse.collapsing {
     height: auto;
-    -webkit-transition: left 0.3s ease;
-    -o-transition: left 0.3s ease;
-    -moz-transition: left 0.3s ease;
-    transition: left 0.3s ease;
-    /* left: -100%; */
-  }
-  .navbar-collapse.show {
-    left: 0;
     -webkit-transition: left 0.3s ease-in-out;
     -o-transition: left 0.3s ease-in;
     -moz-transition: left 0.3s ease-in;
     transition: left 0.3s ease-in-out;
   }
+  .navbar-collapse {
+    position: absolute;
+    top: 0;
+    left: -180px;
+  }
+
+  .navbar-collapse.show {
+    left: 0;
+    -webkit-transition: left 0.7s ease-in-out;
+    -o-transition: left 0.7s ease-in;
+    -moz-transition: left 0.7s ease-in;
+    transition: left 0.7s ease-in-out;
+  }
   .content {
-    width: 100%;
-    left: 0px;
+    margin-left: 0;
     z-index: -1;
     padding: 20px;
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 50px, 0);
-    transform: translate3d(0, 50px, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-@keyframes bg_animation {
-  0% {
-    background-position: -100px 0;
-  }
-  100% {
-    background-position: 0 0;
   }
 }

@@ -1,5 +1,7 @@
 
 import { MDBIcon} from 'mdbreact';
+import '../styles/contactus.css'
+
 export default function ContactUs(){
     return (
         <div className="row">

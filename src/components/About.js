@@ -1,6 +1,15 @@
+import {useEffect} from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
+
 function About() {
+    useEffect(() => {
+        AOS.init({ duration:1000 });
+    },[])
     return (
-        <div className="row">
+        <div data-aos="fade-right" 
+            data-aos-offset="300"   
+            data-aos-easing="ease-in-sine" className="row">
         <div className="col-sm-12 about animated fadeInUp">
             <h6>About Me</h6>
             <h2>Who am i?</h2>

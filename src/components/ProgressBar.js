@@ -8,7 +8,7 @@ class ProgressBar extends Component{
     }
     render() {
         return (
-            <div>
+            <div data-aos="fade-in">
                 <h6>{this.props.title}</h6>
                 <div data-aos="fade-up" data-aos-delay="50" className="progress">
                     <div className={[ "progress-bar" ,this.props.bgcolor].join(" ")}

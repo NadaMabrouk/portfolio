@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 import { Carousel,CarouselItem } from 'react-bootstrap'
 import {CarouselData} from './CarouselData'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 class Projects extends Component {
+    componentDidUpdate(){
+        AOS.init({ duration:1000 });
+    }
     render() {
         return(
-            <div style={styles.projects}>
+            <div data-aos="fade-right" style={styles.projects}>
                 <div className="row">
                 <Carousel style={styles.carousel}>
                     {CarouselData.map(entry => {

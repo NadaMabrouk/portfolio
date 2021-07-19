@@ -1,0 +1,66 @@
+.contact {
+  min-height: 200px;
+  background-color: rgb(230, 233, 232);
+  width: 100%;
+  padding: 20px;
+}
+.info {
+  margin-left: 1.5em;
+}
+
+.contactInfo > ul {
+  list-style: none;
+  margin: 2% auto;
+  width: 250px;
+}
+
+.contactInfo > ul > li {
+  display: inline;
+  margin: 1%;
+}
+
+.contactInfo > ul > li > a {
+  text-decoration: none;
+}
+
+.circle {
+  padding: 10px;
+  width: 40px;
+  background-color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+.facebook {
+  color: #3b5897;
+  border-color: #3b5897;
+}
+.facebook:hover {
+  background-color: #3b5897;
+}
+
+.linkedin {
+  color: #0e78aa;
+  border-color: #0e78aa;
+}
+
+.linkedin:hover {
+  background-color: #0e78aa;
+}
+
+.github {
+  color: #333;
+  border-color: #333;
+}
+
+.github:hover {
+  background-color: #333;
+}
+
+.facebook:hover,
+.linkedin:hover,
+.github:hover {
+  color: #ffffff;
+}

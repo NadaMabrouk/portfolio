@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Nav, Navbar} from 'react-bootstrap'
+import '../styles/sidebar.css'
 
 class Sidebar extends Component{
     state = {
@@ -36,7 +37,7 @@ class Sidebar extends Component{
                             />
                         </Navbar.Brand>
                         <h4>Nada Mabrouk</h4>
-                        <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link href="#home" >Home</Nav.Link>
                         <Nav.Link href="#about">About</Nav.Link>
                         <Nav.Link href="#skills">Skills</Nav.Link>
                         <Nav.Link href="#projects">Projects</Nav.Link>
