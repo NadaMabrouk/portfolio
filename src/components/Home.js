@@ -12,7 +12,7 @@ function Home () {
                         <h2>I'm Nada</h2>
                         <a
                             className="btn"
-                            href="https://www.dropbox.com/s/tj3k0jxlew0idte/Nada%20Mabrouk%20-%202021.pdf?dl=0#"
+                            href="https://www.dropbox.com/s/2tmktkkqkrcgu4o/Nada%20Mabrouk%20-%202021.pdf?dl=0"
                             target="_blank"
                             rel="noreferrer"
                         >
