@@ -5,9 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'mdbreact/dist/css/mdb.css';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-    <App />,
+  <BrowserRouter  basename={process.env.PUBLIC_URL}>
+    <App />
+    </BrowserRouter>,
   document.getElementById('root')
 );
 
